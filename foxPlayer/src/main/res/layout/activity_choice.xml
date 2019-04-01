@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="130"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/top_logo"
+            app:scale_height="74"
+            app:scale_left="28"
+            app:scale_top="32"
+            app:scale_width="140" />
+
+        <com.littlefox.library.view.text.SeparateTextView
+            android:id="@+id/main_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:scale_height="130"
+            app:scale_left="190"
+            app:scale_textsize="42"
+            app:scale_top="0"
+            app:scale_width="500" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/margin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:scale_base_height="150"
+        app:scale_base_width="1920"
+         >
+        </com.ssomai.android.scalablelayout.ScalableLayout>    
+    
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="434"
+        app:scale_base_width="1920" >
+
+        <com.littlefox.library.view.text.SeparateTextView
+            android:id="@+id/choice_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="15dp"
+            android:text=""
+            android:textColor="@color/color_000000"
+            app:scale_height="250"
+            app:scale_left="0"
+            app:scale_textsize="60"
+            app:scale_top="100"
+            app:scale_width="1920" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="424"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:id="@+id/button_littlefox_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_btn01"
+            app:scale_height="424"
+            app:scale_left="420"
+            app:scale_top="0"
+			app:scale_width="542" />
+        <ImageView
+            android:id="@+id/button_littlefox_ch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_btn02"
+            app:scale_height="424"
+            app:scale_left="962"
+            app:scale_top="0"
+            app:scale_width="542" />
+        
+        <TextView 
+            android:id="@+id/text_littlefox_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_littlefox_eng"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            app:scale_top="295"
+            app:scale_left="470"
+            app:scale_width="340"
+            app:scale_height="105"
+            app:scale_textsize="40"/>
+           />"
+        <TextView 
+            android:id="@+id/text_littlefox_ch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_littlefox_ch"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            app:scale_top="295"
+            app:scale_left="1114"
+            app:scale_width="340"
+            app:scale_height="105"
+            app:scale_textsize="40"/>
+           />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</LinearLayout>

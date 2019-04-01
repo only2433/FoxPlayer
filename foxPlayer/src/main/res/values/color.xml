@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?> 
+ <resources> 
+     <color name="color_primary_red">#f44336</color> 
+     <color name="color_primary_red_dark">#d32f2f</color> 
+     <color name="color_primary_green"> #4caf50</color> 
+     <color name="color_primary_green_dark">#388e3c</color> 
+     <color name="color_primary_blue">#2196f3</color> 
+     <color name="color_primary_blue_dark">#1976d2</color>     
+     <color name="color_accent_pink">#ff4081</color>  
+     <color name="color_shadow">#44000000</color> 
+     
+     <!-- 추후 다 이런식으로 변경해야함. -->
+     <color name="color_f3f3f3">#f3f3f3</color>
+     <color name="color_a7a7a7">#a7a7a7</color>
+     <color name="color_403f4e">#403f4e</color>
+     <color name="color_93939c">#93939c</color>
+     <color name="color_68badb">#68badb</color>
+     <color name="color_f6f5f6">#f6f5f6</color>
+     <color name="color_ffffff">#ffffff</color>
+     <color name="color_d8232a">#d8232a</color>
+     <color name="color_00b980">#00b980</color>
+     <color name="color_b1b1b1">#b1b1b1</color>
+     <color name="color_333333">#333333</color>
+     <color name="color_d48686">#d48686</color>
+     <color name="color_d6d6d6">#d6d6d6</color>
+     <color name="color_c99292">#c99292</color>
+     <color name="color_5e626d">#5e626d</color>
+     <color name="color_fff9e6">#fff9e6</color>
+     <color name="color_e9bb9b">#e9bb9b</color>
+     <color name="color_444444">#444444</color>
+     <color name="color_000000">#000000</color>
+     <color name="color_edeef2">#edeef2</color>
+     <color name="color_ecaaab">#ecaaab</color>
+     <color name="color_ffe84d">#ffe84d</color>
+     <color name="color_949494">#949494</color>
+     <color name="color_ad1c22">#ad1c22</color>
+     <color name="color_888888">#888888</color>
+     <color name="color_f7b90e">#f7b90e</color>
+     <color name="color_fbdc87">#fbdc87</color>
+     <color name="color_c6940b">#c6940b</color>
+     <color name="color_cccccc">#cccccc</color>
+     <color name="color_3b3b3b">#3b3b3b</color>
+     <color name="color_606c93">#606c93</color>
+     <color name="color_f6f6f6">#f6f6f6</color>
+     <color name="color_e1eaf2">#e1eaf2</color>
+     <color name="color_a1a1a1">#a1a1a1</color>
+     <color name="color_ed1b23">#ed1b23</color>
+     <color name="color_f23b3b">#f23b3b</color>
+     <color name="color_f65726">#ed1b23</color>
+     <color name="color_51586d">#51586d</color>
+     <color name="color_cdefeb">#cdefeb</color>
+     <color name="color_886ac9">#886ac9</color>
+     <color name="color_ac97d9">#ac97d9</color>
+     <color name="color_aaaaaa">#aaaaaa</color>
+     <color name="color_ebebeb">#ebebeb</color>
+     <color name="color_6d55a1">#6d55a1</color>
+     <color name="color_f5f5f5">#f5f5f5</color>
+     <color name="color_d8d8d8">#d8d8d8</color>
+     <color name="color_1b3b90">#1b3b90</color>
+     <color name="color_e24c4d">#e24c4d</color>
+     <color name="color_18b5b2">#18b5b2</color>
+     <color name="color_3d92e7">#3d92e7</color>
+     <color name="color_4d4d4d">#4d4d4d</color>
+     <color name="color_d3d3d6">#d3d3d6</color>
+     <color name="color_999999">#999999</color>
+     
+     <!-- loading dialog color -->
+     <color name="color_ed433e">#ed433e</color>
+     <!-- SnackBar Color -->
+     <color name="color_ffeda0">#ffeda0</color>
+     
+     
+     <color name="color_fff305">#fff305</color>
+     <color name="color_3e95c1">#3e95c1</color>
+     <color name="color_5faed9">#5faed9</color>
+     <color name="color_3b3a3f">#3b3a3f</color>
+     <color name="color_78ca16">#78ca16</color>
+     <color name="color_fb6464">#fb6464</color>
+     <color name="color_323237">#323237</color>
+
+
+</resources>

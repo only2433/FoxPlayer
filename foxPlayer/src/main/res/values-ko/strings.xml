@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">리틀팍스 플레이어</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_confirm">확인</string>
+    <string name="button_cancel">취소</string>
+    <string name="button_quiz_play">Quiz</string>
+    <string name="button_youtube">Youtube</string>
+    <string name="button_pay_ing">Payment</string>
+    <string name="button_remain_all_play">남은편 모두보기</string>
+    <string name="button_replay">다시보기</string>
+    <string name="second">초</string>
+    <string name="button_subtitle_default">기본</string>
+    <string name="button_subtitle_have">자막</string>
+    <string name="title_littlefox_eng">리틀팍스 영어</string>
+    <string name="title_littlefox_ch">리틀팍스 중국어</string>
+    <string name="title_intro_player">플레이어</string>
+    <string name="title_intro_littlefox">리틀팍스</string>
+    <string-array name="name_day">
+        <item>일요일</item>
+        <item>월요일</item>
+        <item>화요일</item>
+        <item>수요일</item>
+        <item>목요일</item>
+        <item>금요일</item>
+        <item>토요일</item>
+    </string-array>
+    <string-array name="name_month">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+    <string name="title_other_app">리틀팍스 다른 앱 보기</string>
+    <string name="title_other_app_littlefox_song">리틀팍스\n어린이 영어 동요</string>
+    <string name="title_other_app_rocketgirl">Rocket Girl\n리틀팍스 스토리북</string>
+    <string name="title_other_app_littlefox_eng">리틀팍스\n영어</string>
+    <string name="title_other_app_littlefox_ch">리틀팍스\n중국어</string>
+    <string name="message_preview">미리보기...</string>
+    <string name="message_preview_end">미리보기가 종료 되었습니다.</string>
+    <string name="message_preview_end_youtube">Watch our contents for free \non the official Little Fox Youtube Channel.</string>
+    <string name="message_storage_size_warning">Cannot play image due to insufficient storage. Please free up some space.</string>
+    <string name="message_choice_title_2">가 \n월요일부터 금요일까지 발표됩니다.</string>
+    <string name="message_choice_title_1">매일 1편씩 새로운 스토리</string>
+    <string name="message_new_version_update">새로운 버전이 출시되었습니다. 지금 최신 버전으로 업데이트 하시겠습니까?</string>
+    <string name="message_critical_version_update">중요 업데이트가 있습니다. 원활한 앱 이용을 위해서는 반드시 업데이트 해야 합니다.</string>
+</resources>

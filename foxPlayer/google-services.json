@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "647404990100",
+    "firebase_url": "https://foxplayer.firebaseio.com",
+    "project_id": "foxplayer",
+    "storage_bucket": "foxplayer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647404990100:android:e997ecf90ad5c2a0",
+        "android_client_info": {
+          "package_name": "com.littlefox.media.fox.player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647404990100-aa4fd1kll8h73suu6j05ub12b4i3lsak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo3tXNH55sAlun8UC9PUSMpsm8tbwdpB4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

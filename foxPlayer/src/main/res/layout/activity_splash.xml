@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/title_base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:scale_base_height="460"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intro_logo"
+            app:scale_height="164"
+            app:scale_left="800"
+            app:scale_top="0"
+            app:scale_width="319" />
+
+        <com.littlefox.library.view.text.SeparateTextView
+            android:id="@+id/intro_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:scale_height="80"
+            app:scale_left="0"
+            app:scale_textsize="52"
+            app:scale_top="200"
+            app:scale_width="1920" />
+        
+                <com.littlefox.library.view.dialog.ProgressWheel
+            android:id="@+id/intro_loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:matProg_barColor="@color/color_ffffff"
+            app:matProg_progressIndeterminate="true"
+            app:scale_height="80"
+            app:scale_left="0"
+            app:scale_top="320"
+            app:scale_width="80" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:scale_base_height="805"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_3b3a3f"
+            app:scale_height="100"
+            app:scale_left="336"
+            app:scale_top="0"
+            app:scale_width="1248" />
+
+        <TextView
+            android:id="@+id/main_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="100"
+            app:scale_left="371"
+            app:scale_textsize="44"
+            app:scale_top="0"
+            app:scale_width="730" />
+
+        <TextView
+            android:id="@+id/main_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/color_ffffff"
+
+            app:scale_height="100"
+            app:scale_left="1142"
+            app:scale_textsize="34"
+            app:scale_top="0"
+            app:scale_width="400" />
+
+        <ImageView
+            android:id="@+id/thumbnail_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:scale_height="705"
+            app:scale_left="336"
+            app:scale_top="100"
+            app:scale_width="1248" />
+
+        <ImageView
+            android:id="@+id/button_play_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_btn_play_normal"
+            app:scale_height="446"
+            app:scale_left="737"
+            app:scale_top="229"
+            app:scale_width="446" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/littlefox_eng_move_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:scale_base_height="250"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:id="@+id/button_littlefox_eng_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_78ca16"
+            app:scale_height="250"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="235" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_before"
+            app:scale_height="108"
+            app:scale_left="65"
+            app:scale_top="56"
+            app:scale_width="84" />
+
+        <TextView
+            android:id="@+id/button_eng_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="60"
+            app:scale_left="0"
+            app:scale_textsize="28"
+            app:scale_top="190"
+            app:scale_width="235" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/littlefox_ch_move_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:scale_base_height="250"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:id="@+id/button_littlefox_ch_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_fb6464"
+            app:scale_height="250"
+            app:scale_left="1685"
+            app:scale_top="0"
+            app:scale_width="235" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_next"
+            app:scale_height="108"
+            app:scale_left="1770"
+            app:scale_top="56"
+            app:scale_width="84" />
+
+        <TextView
+            android:id="@+id/button_ch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="60"
+            app:scale_left="1685"
+            app:scale_textsize="28"
+            app:scale_top="190"
+            app:scale_width="235" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</RelativeLayout>

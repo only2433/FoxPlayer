@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/other_app_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_323237"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="100"
+        app:scale_base_width="1920" >
+
+        <ImageView
+            android:id="@+id/other_app_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_close"
+            app:scale_height="56"
+            app:scale_left="1802"
+            app:scale_top="40"
+            app:scale_width="57" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:scale_base_height="625"
+        app:scale_base_width="1920" >
+
+        <TextView
+            android:id="@+id/other_app_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_other_app"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="90"
+            app:scale_left="0"
+            app:scale_textsize="60"
+            app:scale_top="0"
+            app:scale_width="1920" />
+
+        <ImageView
+            android:id="@+id/button_other_app_littlefox_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_app01"
+            app:scale_height="269"
+            app:scale_left="230"
+            app:scale_top="226"
+            app:scale_width="268" />
+
+        <ImageView
+            android:id="@+id/button_other_app_littlefox_ch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_app02"
+            app:scale_height="269"
+            app:scale_left="626"
+            app:scale_top="226"
+            app:scale_width="268" />
+
+        <ImageView
+            android:id="@+id/button_other_app_littlefox_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_app03"
+            app:scale_height="269"
+            app:scale_left="1024"
+            app:scale_top="226"
+            app:scale_width="268" />
+
+        <ImageView
+            android:id="@+id/button_other_app_rocket_girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_app04"
+            app:scale_height="269"
+            app:scale_left="1420"
+            app:scale_top="226"
+            app:scale_width="268" />
+
+        <TextView
+            android:id="@+id/other_app_littlefox_eng_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_other_app_littlefox_eng"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="95"
+            app:scale_left="166"
+            app:scale_textsize="38"
+            app:scale_top="520"
+            app:scale_width="396" />
+
+        <TextView
+            android:id="@+id/other_app_littlefox_ch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_other_app_littlefox_ch"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="95"
+            app:scale_left="562"
+            app:scale_textsize="38"
+            app:scale_top="520"
+            app:scale_width="396" />
+
+        <TextView
+            android:id="@+id/other_app_littlefox_song_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_other_app_littlefox_song"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="95"
+            app:scale_left="958"
+            app:scale_textsize="38"
+            app:scale_top="520"
+            app:scale_width="396" />
+
+        <TextView
+            android:id="@+id/other_app_littlefox_storybook_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_other_app_rocketgirl"
+            android:textColor="@color/color_ffffff"
+            app:scale_height="95"
+            app:scale_left="1354"
+            app:scale_textsize="38"
+            app:scale_top="520"
+            app:scale_width="396" />
+                                                                   
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</RelativeLayout>

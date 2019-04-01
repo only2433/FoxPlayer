@@ -1,0 +1,4 @@
+#Mon Apr 01 15:23:03 KST 2019
+base.0=D\:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
