@@ -104,7 +104,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 	@BindView(R.id.player_next_button)
 	ImageView _NextButton;
 
-
 	@BindView(R.id.player_preview_layout)
 	ScalableLayout _PreviewLayout;
 	
