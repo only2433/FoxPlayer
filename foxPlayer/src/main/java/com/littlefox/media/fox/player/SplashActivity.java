@@ -162,7 +162,7 @@ public class SplashActivity extends BaseActivity
 		}
 		else
 		{
-			Log.i("uri : "+ mInformationURI.toString());
+			Log.f("uri : "+ mInformationURI.toString());
 			String[] contentIDList  = mInformationURI.getQueryParameter("param1").split("/");
 			String[] authTypeList	= mInformationURI.getQueryParameter("param2").split("/");
 			String[] extraList		= mInformationURI.getQueryParameter("param3").split("/");

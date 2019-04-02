@@ -1,15 +1,10 @@
 package com.littlefox.media.fox.player.analytics;
 
-import java.util.HashMap;
-
-import com.google.android.gms.analytics.GoogleAnalytics;
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Logger;
-import com.google.android.gms.analytics.Tracker;
-import com.littlefox.media.fox.player.R;
-
-import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.littlefox.logmonitor.Log;
 
 
 
@@ -21,21 +16,13 @@ import android.content.Context;
  */
 public class GoogleAnalyticsHelper
 {
-	
-	public enum TrackerName {
-	    APP_TRACKER, // Tracker used only in this app.
-	    GLOBAL_TRACKER, // Tracker used by all the apps from a company. eg: roll-up tracking.
-	    ECOMMERCE_TRACKER, // Tracker used by all ecommerce transactions from a company.
-	  }
 
-	private HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
 	
 	//TODO : 입력해야함.
 	public static final String PROPERTY_ID = "UA-37277849-5";
 	
 	public static GoogleAnalyticsHelper sGoogleAnalyticsHelper = null;
-	private GoogleAnalytics mGoogleAnalytics;
-	private Tracker mTracker;
+	private FirebaseAnalytics mFirebaseAnalytics;
 	
 	public static GoogleAnalyticsHelper getInstance(Context context)
 	{
@@ -53,38 +40,10 @@ public class GoogleAnalyticsHelper
 	 */
 	private void init(Context context)
 	{
-		mGoogleAnalytics = GoogleAnalytics.getInstance(context);
-		mGoogleAnalytics.getLogger().setLogLevel(Logger.LogLevel.VERBOSE);
-		mTracker = getTracker(TrackerName.APP_TRACKER);
-		mTracker.enableAdvertisingIdCollection(true);
-		mTracker.enableAutoActivityTracking(true);
-		mTracker.enableAutoActivityTracking(true);
-		mTracker.setSessionTimeout(300);
+		mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
 	}
 	
-	
-	synchronized Tracker getTracker(TrackerName trackerId) {
-	    if (!mTrackers.containsKey(trackerId)) {
-	      Tracker t = (trackerId == TrackerName.APP_TRACKER) ? mGoogleAnalytics.newTracker(PROPERTY_ID)
-	          : (trackerId == TrackerName.GLOBAL_TRACKER) ? mGoogleAnalytics.newTracker(R.xml.global_tracker)
-	              : mGoogleAnalytics.newTracker(R.xml.ecommerce_tracker);
-	      mTrackers.put(trackerId, t);
-	  
-	    }
-	    return mTrackers.get(trackerId);
-	  }
 
-	
-	/**
-	 * 현재 보이는 화면을 전달한다.
-	 * @param viewName
-	 */
-	public void sendCurrentAppView(String viewName)
-	{
-		mTracker.setScreenName(viewName);
-		mTracker.send(new HitBuilders.AppViewBuilder().build());
-	}
-	
 	/**
 	 * 현재 사용자의 이벤트를 전달한다.
 	 * @param category 액티비티
@@ -92,7 +51,10 @@ public class GoogleAnalyticsHelper
 	 */
 	public void sendCurrentEvent(String category, String action)
 	{
-		mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(action).build());
+		Log.i("Category : "+ category + ", Action : "+action);
+		Bundle bundle = new Bundle();
+		bundle.putString("action", action);
+		mFirebaseAnalytics.logEvent(category, bundle);
 	}
 	
 	/**
@@ -103,26 +65,12 @@ public class GoogleAnalyticsHelper
 	 */
 	public void sendCurrentEvent(String category, String action, String label)
 	{
-		mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(action).setLabel(label).build());
+		Log.i("Category : "+ category + ", Action : "+action+", Label : "+label);
+		Bundle bundle = new Bundle();
+		bundle.putString("action", action);
+		bundle.putString("label", label);
+		mFirebaseAnalytics.logEvent(category, bundle);
 	}
 	
-	/**
-	 * 현재 액티비티의 행동을 추적한다.
-	 * @param activity
-	 */
-	public void startAnalytics(Activity activity)
-	{
-		mGoogleAnalytics.reportActivityStart(activity);
-	}
-	
-	/**
-	 * 현재 액티비티의 행동을 추적하는것을 그만둔다.
-	 * @param activity
-	 */
-	public void stopAnalytics(Activity activity)
-	{
-		mGoogleAnalytics.reportActivityStop(activity);
-	}
-	
-	
+
 }
