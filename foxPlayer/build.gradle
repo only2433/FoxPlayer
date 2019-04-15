@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.littlefox.media.fox.player"
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode="7"
         versionName="1.0.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -33,7 +33,7 @@ android {
 
 buildscript
         {
-            ext.support_lib_version ='27.1.1'
+            ext.support_lib_version ='28.0.0'
             ext.support_google_play ="12.0.1"
         }
 

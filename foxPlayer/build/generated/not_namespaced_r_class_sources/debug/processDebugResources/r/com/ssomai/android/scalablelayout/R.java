@@ -12,32 +12,32 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int scale_base_height = 0x7f04012b;
-        public static final int scale_base_width = 0x7f04012c;
-        public static final int scale_height = 0x7f04012d;
-        public static final int scale_left = 0x7f04012e;
-        public static final int scale_left_baseposition = 0x7f04012f;
-        public static final int scale_textsize = 0x7f040130;
-        public static final int scale_top = 0x7f040131;
-        public static final int scale_top_baseposition = 0x7f040132;
-        public static final int scale_width = 0x7f040133;
-        public static final int textview_wrapcontent_direction = 0x7f040181;
-        public static final int textview_wrapcontent_movesiblings = 0x7f040182;
-        public static final int textview_wrapcontent_resizesurrounded = 0x7f040183;
+        public static final int scale_base_height = 0x7f040186;
+        public static final int scale_base_width = 0x7f040187;
+        public static final int scale_height = 0x7f040188;
+        public static final int scale_left = 0x7f040189;
+        public static final int scale_left_baseposition = 0x7f04018a;
+        public static final int scale_textsize = 0x7f04018b;
+        public static final int scale_top = 0x7f04018c;
+        public static final int scale_top_baseposition = 0x7f04018d;
+        public static final int scale_width = 0x7f04018e;
+        public static final int textview_wrapcontent_direction = 0x7f0401ff;
+        public static final int textview_wrapcontent_movesiblings = 0x7f040200;
+        public static final int textview_wrapcontent_resizesurrounded = 0x7f040201;
     }
     public static final class id {
         private id() {}
 
         public static final int bottom = 0x7f090029;
         public static final int center = 0x7f090038;
-        public static final int left = 0x7f090075;
-        public static final int right = 0x7f0900c3;
-        public static final int top = 0x7f09010e;
+        public static final int left = 0x7f090079;
+        public static final int right = 0x7f0900ca;
+        public static final int top = 0x7f09011c;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] ScalableLayout = { 0x7f04012b, 0x7f04012c, 0x7f04012d, 0x7f04012e, 0x7f040130, 0x7f040131, 0x7f040133, 0x7f040181, 0x7f040182, 0x7f040183 };
+        public static final int[] ScalableLayout = { 0x7f040186, 0x7f040187, 0x7f040188, 0x7f040189, 0x7f04018b, 0x7f04018c, 0x7f04018e, 0x7f0401ff, 0x7f040200, 0x7f040201 };
         public static final int ScalableLayout_scale_base_height = 0;
         public static final int ScalableLayout_scale_base_width = 1;
         public static final int ScalableLayout_scale_height = 2;
@@ -48,11 +48,11 @@ public final class R {
         public static final int ScalableLayout_textview_wrapcontent_direction = 7;
         public static final int ScalableLayout_textview_wrapcontent_movesiblings = 8;
         public static final int ScalableLayout_textview_wrapcontent_resizesurrounded = 9;
-        public static final int[] TextView = { 0x7f040181, 0x7f040182, 0x7f040183 };
+        public static final int[] TextView = { 0x7f0401ff, 0x7f040200, 0x7f040201 };
         public static final int TextView_textview_wrapcontent_direction = 0;
         public static final int TextView_textview_wrapcontent_movesiblings = 1;
         public static final int TextView_textview_wrapcontent_resizesurrounded = 2;
-        public static final int[] View = { 0x1010000, 0x10100da, 0x7f04010c, 0x7f04010d, 0x7f04012d, 0x7f04012e, 0x7f04012f, 0x7f040130, 0x7f040131, 0x7f040132, 0x7f040133, 0x7f040184 };
+        public static final int[] View = { 0x1010000, 0x10100da, 0x7f040167, 0x7f040168, 0x7f040188, 0x7f040189, 0x7f04018a, 0x7f04018b, 0x7f04018c, 0x7f04018d, 0x7f04018e, 0x7f040202 };
         public static final int View_android_theme = 0;
         public static final int View_android_focusable = 1;
         public static final int View_paddingEnd = 2;
