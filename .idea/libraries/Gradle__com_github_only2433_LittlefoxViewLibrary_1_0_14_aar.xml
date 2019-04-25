@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.only2433:LittlefoxViewLibrary:1.0.14@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/f830a6a69033aee06bcc5341e09bd89d/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/88a3c36924191738233003c510f4862f/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/f830a6a69033aee06bcc5341e09bd89d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/f830a6a69033aee06bcc5341e09bd89d/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/88a3c36924191738233003c510f4862f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxViewLibrary-1.0.14.aar/88a3c36924191738233003c510f4862f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

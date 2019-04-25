@@ -154,8 +154,6 @@ public class SplashActivity extends BaseActivity
     
     private void startProcess()
     {
-    	
-		
 		if(mInformationURI == null)
 		{
 			mMainHandler.sendEmptyMessageDelayed(MESSAGE_INIT, DURATION_INIT);

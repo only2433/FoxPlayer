@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.only2433:LittlefoxLogMoniter:1.0.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxLogMoniter-1.0.4.aar/7d08e82ed702659fb1229af793cb4acd/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxLogMoniter-1.0.4.aar/7d08e82ed702659fb1229af793cb4acd/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxLogMoniter-1.0.4.aar/af66c8235d1b1389cf229a26244942d5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LittlefoxLogMoniter-1.0.4.aar/af66c8235d1b1389cf229a26244942d5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
