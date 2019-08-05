@@ -41,7 +41,6 @@ public class InitVideoInformationAsync extends BaseAsync
 		synchronized (mSync)
 		{
 			isRunning = true;
-			
 			try
 			{
 				WebInitInformation webInitInformation = (WebInitInformation) CommonUtils.getInstance(mContext).getPreferenceObject(Common.PARAMS_WEB_INIT_INFORMATION, WebInitInformation.class);
@@ -57,7 +56,6 @@ public class InitVideoInformationAsync extends BaseAsync
 				list.put("auth_type", webInitInformation.getContentType(mCurrentPlayPosition));
 				list.put("user_type", webInitInformation.getUserType());
 
-				
 				String response = NetworkUtil.requestServerPair(mContext, Common.URI_AUTH_CONTENT_PLAY, list, NetworkUtil.POST_METHOD);
 				result = new Gson().fromJson(response, VideoInformationResult.class);
 			}catch(Exception e)
@@ -66,9 +64,6 @@ public class InitVideoInformationAsync extends BaseAsync
 				mAsyncListener.onErrorListener(Common.ASYNC_CODE_INIT_VIDEO_INFORMATION, e.getMessage());
 			}
 		}
-		
 		return result;
 	}
-
-
 }

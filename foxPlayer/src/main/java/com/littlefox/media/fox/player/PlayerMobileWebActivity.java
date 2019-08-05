@@ -373,8 +373,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 		{
 			setContentView(R.layout.player_mobile_web_main);
 		}
-		
-		
 		ButterKnife.bind(this);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		Log.f("");
@@ -597,7 +595,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 	
 	private void setCaptionLayoutStatus(boolean isVisible)
 	{
-		
 		if(isVisible)
 		{
 			_TopCaptionSettingButton.setImageResource(R.drawable.player_icon_subtitle_yellow);
@@ -628,8 +625,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 	}
 
 	
-
-	
 	/**
 	 * 저장되어 있는 모든 파일을 삭제한다.
 	 */
@@ -642,7 +637,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 			Log.f("Deleted File Path  : "+ playedList.get(i).getFilePath()+", Content ID : "+ playedList.get(i).getContentID());
 			mPlayedContentDBHelper.deletePlayedContent(playedList.get(i).getContentID());
 		}
-		
 		FileUtils.deleteAllFileInPath(Common.PATH_MP4_SAVE);
 	}
 	
@@ -704,7 +698,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 				}
 			});
 			break;
-
 		}
 	}
 	
@@ -721,20 +714,17 @@ public class PlayerMobileWebActivity extends BaseActivity
 	}
 
 	/**
-	 * 해당 컨텐츠 정보를 전달하여 비디오 정보를 요청한다.  
+	 * 해당 컨텐츠 정보를 전달하여 비디오 정보를 요청한다.
 	 */
 	private void requestCurrentPlayVideoUrlInformation()
 	{
 		mCurrentPlayContentId = isCaptionPlaying == true ? mWebInitInformation.getContentID(mCurrentPlayPosition) +"_caption" : mWebInitInformation.getContentID(mCurrentPlayPosition);
-		
-	
 		if(isCaptionPlaying == true && mWebInitInformation.getContentType(mCurrentPlayPosition).equals(String.valueOf(Common.REQUEST_CONTENT_TYPE_SONG)) == false)
 		{
 			Log.i("Change");
 			mWebInitInformation.setContentType(mCurrentPlayPosition, String.valueOf(Common.REQUEST_CONTENT_TYPE_MOVIE_WITH_CAPTION));
 			CommonUtils.getInstance(this).setPreferenceObject(Common.PARAMS_WEB_INIT_INFORMATION, mWebInitInformation);
 		}
-		
 		InitVideoInformationAsync initVideoInformationAsync = new InitVideoInformationAsync(this);
 		initVideoInformationAsync.setData(mCurrentPlayPosition);
 		initVideoInformationAsync.setAsyncListener(mAsyncListener);
@@ -760,7 +750,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 	
 	private void setLockModeUI()
 	{
-		
 		if(isLockDisplay)
 		{
 			_LockButton.setImageResource(R.drawable.player_icon_lock);
@@ -778,7 +767,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 			_CurrentPlayTimeText.setVisibility(View.VISIBLE);
 			_ThumbSeekbar.setVisibility(View.VISIBLE);
 			_RemainPlayTimeText.setVisibility(View.VISIBLE);
-			
 		}
 	}
 	
@@ -812,7 +800,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 				return false;
 			}
 		}
-		
 	}
 	
 	/**
@@ -832,7 +819,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 					mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_IN);
 					mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_IN);
 				}
-
 			}
 		}
 		else
@@ -844,7 +830,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 				{
 					mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_OUT);
 					mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_OUT);
-					
 				}
 			}
 		}
@@ -860,7 +845,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 				_PlayButtonLayout.setVisibility(View.VISIBLE);
 				_BottomViewLayout.setVisibility(View.VISIBLE);
 			}
-
 		}
 		else
 		{
@@ -870,7 +854,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 				_PlayButtonLayout.setVisibility(View.GONE);
 				_BottomViewLayout.setVisibility(View.GONE);
 			}
-
 		}
 	}
 
@@ -968,7 +951,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 		_BackgroundDiscoverImage.setVisibility(View.VISIBLE);
 		
 
-		
 		switch(playType)
 		{
 		case VIDEO_INIT_PLAY:
@@ -1756,11 +1738,8 @@ public class PlayerMobileWebActivity extends BaseActivity
 	
 	private AsyncListener mAsyncListener = new AsyncListener()
 	{
-
 		@Override
-		public void onRunningStart(String code) {
-
-		}
+		public void onRunningStart(String code) { }
 
 		@Override
 		public void onRunningEnd(String code, Object mObject)
@@ -1785,17 +1764,13 @@ public class PlayerMobileWebActivity extends BaseActivity
 						savePlayFileDataBase();
 						mVideoInformationResult = ((VideoInformationResult)mObject);
 						mCaptionInformationResult = mVideoInformationResult.getCaptionInformationResult();
-
 						Log.i("Caption Use  : " + mVideoInformationResult.isCaptionDataUse());
 						Log.i("Caption Size : " +mCaptionInformationResult.getCaptionDetailInformationList().size());
-
 						mCurrentPlayUrl = mVideoInformationResult.getVideoUrl();
-
 						if(Feature.IS_FREE_USER && mVideoInformationResult.isFreeViewAvailable() == false)
 						{
 							Feature.IS_FREE_USER = false;
 						}
-
 
 						if(Feature.IS_FREE_USER)
 						{
@@ -1814,26 +1789,15 @@ public class PlayerMobileWebActivity extends BaseActivity
 		}
 
 		@Override
-		public void onRunningCanceled(String code) {
-
-		}
+		public void onRunningCanceled(String code) { }
 
 		@Override
-		public void onRunningProgress(String code, Integer progress) {
-
-		}
+		public void onRunningProgress(String code, Integer progress) { }
 
 		@Override
-		public void onRunningAdvanceInformation(String code, Object object) {
-
-		}
+		public void onRunningAdvanceInformation(String code, Object object) { }
 
 		@Override
-		public void onErrorListener(String code, String message) {
-
-		}
+		public void onErrorListener(String code, String message) { }
 	};
-	
-
-
 }

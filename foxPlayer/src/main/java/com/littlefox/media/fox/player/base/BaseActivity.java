@@ -1,16 +1,15 @@
 package com.littlefox.media.fox.player.base;
 
 
-import com.littlefox.logmonitor.ExceptionCheckHandler;
-import com.littlefox.logmonitor.Log;
-import com.littlefox.media.fox.player.R;
-import com.littlefox.media.fox.player.common.Common;
-import com.littlefox.media.fox.player.common.CommonUtils;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.littlefox.logmonitor.ExceptionCheckHandler;
+import com.littlefox.media.fox.player.R;
+import com.littlefox.media.fox.player.common.Common;
+import com.littlefox.media.fox.player.common.CommonUtils;
 
 public class BaseActivity extends AppCompatActivity
 {
@@ -51,7 +50,7 @@ public class BaseActivity extends AppCompatActivity
 	{
 		super.finish();
 	}
-	
-	
-	
+
+
+
 }

@@ -36,7 +36,6 @@ public class PlayerSaveRecordAsync extends BaseAsync
 			isRunning = true;
 			
 			WebInitInformation webInitInformation = (WebInitInformation) CommonUtils.getInstance(mContext).getPreferenceObject(Common.PARAMS_WEB_INIT_INFORMATION, WebInitInformation.class);
-
 			ContentValues list = new ContentValues();
 			list.put("locale", Locale.getDefault().toString());
 			list.put("service_id", webInitInformation.getServiceCode());
@@ -47,7 +46,6 @@ public class PlayerSaveRecordAsync extends BaseAsync
 			list.put("user_id", webInitInformation.getUserID());
 			list.put("session_key1", webInitInformation.getClientKey());
 
-			
 			try
 			{
 				String response = NetworkUtil.requestServerPair(mContext, Common.URI_PLAY_SAVE_RECORD, list, NetworkUtil.POST_METHOD);
@@ -57,9 +55,7 @@ public class PlayerSaveRecordAsync extends BaseAsync
 				e.printStackTrace();
 				mAsyncListener.onErrorListener(Common.ASYNC_CODE_PLAY_SAVE_RECORD, e.getMessage());
 			}
-
 		}
-		
 		return result;
 	}
 

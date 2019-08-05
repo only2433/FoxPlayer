@@ -148,7 +148,6 @@ public class SplashActivity extends BaseActivity
 		}
 		
 		initFont();
-		
 		requestUpdateVersionInformation();
     }
     
