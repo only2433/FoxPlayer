@@ -942,12 +942,14 @@ public class PlayerMobileWebActivity extends BaseActivity
 	
 	private void playVideo(int playType)
 	{
+		mCurrentCaptionIndex = 0;
 		_ProgressMediaPlayer.reset();
 		enableTimer(false);
 		mStudyTime = 0;
 		showMenu(false);
 		showLoading(true);
 		isVideoLoadingComplete = false;
+		_CaptionTitleText.setText("");
 		_BackgroundDiscoverImage.setVisibility(View.VISIBLE);
 		
 
@@ -1298,7 +1300,8 @@ public class PlayerMobileWebActivity extends BaseActivity
 					}
 					
 					_CurrentPlayTimeText.setText(CommonUtils.getInstance(PlayerMobileWebActivity.this).getMillisecondTime(_ProgressMediaPlayer.getCurrentPlayerDuration()));
-					
+
+					Log.f("mCurrentCaptionIndex : "+mCurrentCaptionIndex);
 					if(Feature.IS_CAPTION_USED)
 					{
 						if(isTimeForCaption() == true)
