@@ -17,6 +17,9 @@
     <string name="title_littlefox_ch">Little Fox Chinese</string>
     <string name="title_intro_player">Player</string>
     <string name="title_intro_littlefox">Little Fox</string>
+    <string name="title_play_list">PlayList</string>
+    <string name="title_playing_speed">Playing Speed</string>
+
     <string-array name="name_day">
         <item>Sunday</item>
         <item>Monday</item>
@@ -26,6 +29,7 @@
         <item>Friday</item>
         <item>Saterday</item>
     </string-array>
+
     <string-array name="name_month">
         <item>January</item>
         <item>February</item>
@@ -40,6 +44,15 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+
+    <string-array name="text_list_speed">
+        <item>0.7x</item>
+        <item>0.85x</item>
+        <item>1x (Normal)</item>
+        <item>1.15x</item>
+        <item>1.3x</item>
+    </string-array>
+
     <string name="title_other_app">Little Fox Other App</string>
     <string name="title_other_app_littlefox_song">Little Fox\nSong</string>
     <string name="title_other_app_rocketgirl">Rocket Girl\nLittle Fox Storybook</string>
@@ -53,4 +66,5 @@
     <string name="message_choice_title_1">We publish a new story </string>
     <string name="message_new_version_update">A new version of Little Fox Player is available. Do you want to update now?</string>
     <string name="message_critical_version_update">We recommend that you use the latest version of the Little Fox Player. If not, there may be problems during its use.</string>
+    <string name="message_longtime_play_warning">You are watching movie for a long time. Would you like to take a rest for a while? Do you want to continue watching movie?</string>
 </resources>

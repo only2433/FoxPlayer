@@ -36,7 +36,6 @@ public class WebInitInformation
 		mClientKey			= clientKey;
 		mServerKey			= serverKey;
 		mServiceCode		= serviceCode;
-		
 		mPlayItemCount		= mContentIDList.length;
 	}
 

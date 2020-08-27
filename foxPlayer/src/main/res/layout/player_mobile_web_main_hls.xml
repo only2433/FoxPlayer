@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/_playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        app:use_controller="false"
+        app:resize_mode="fill"
+        android:visibility="visible"></com.google.android.exoplayer2.ui.PlayerView>
+
+    <ImageView
+        android:id="@+id/player_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_000000"
+
+        />
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/progress_wheel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        app:scale_base_height="150"
+        app:scale_base_width="1920" >
+
+        <com.littlefox.library.view.dialog.ProgressWheel
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:matProg_barColor="@color/color_ed433e"
+            app:matProg_progressIndeterminate="true"
+            app:scale_height="150"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="150" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <ImageView
+        android:id="@+id/_playerOptionBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:alpha = "0.5"
+        android:background="@color/color_black"
+        android:gravity="center" />
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/player_top_base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_top_bg"
+        app:scale_base_width="1920"
+        app:scale_base_height="150"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/player_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_ffffff"
+            app:scale_top="0"
+            app:scale_left="48"
+            app:scale_width="1200"
+            app:scale_height="150"
+            app:scale_textsize="50"/>
+
+        <ImageView
+            android:id="@+id/player_subtitle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_subtitle_white"
+            app:scale_top="46"
+            app:scale_width="60"
+            app:scale_height="62"
+            app:scale_left="1490" />
+
+        <ImageView
+            android:id="@+id/_playerListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player__list"
+            app:scale_top="46"
+            app:scale_left="1652"
+            app:scale_width="62"
+            app:scale_height="60"/>
+
+        <ImageView
+            android:id="@+id/player_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_btn_close"
+            app:scale_top="46"
+            app:scale_left="1814"
+            app:scale_width="62"
+            app:scale_height="60"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/player_caption_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        app:scale_base_width="1920"
+        app:scale_base_height="150"
+
+        >
+        <TextView
+            android:id="@+id/player_caption_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ffffff"
+            android:background="#99000000"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            app:scale_top="0"
+            app:scale_left="0"
+            app:scale_width="1920"
+            app:scale_height="150"
+            app:scale_textsize="45"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/player_bottom_base_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_bottom_bg"
+        android:layout_alignParentBottom="true"
+        app:scale_base_width="1920"
+        app:scale_base_height="150"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/player_current_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/color_ffffff"
+            app:scale_height="150"
+            app:scale_left="46"
+            app:scale_textsize="34"
+            app:scale_top="0"
+            app:scale_width="94" />
+
+        <SeekBar
+            android:id="@+id/seekbar_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:maxHeight="4dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/player_seekbar_progress"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="0dip"
+            app:scale_height="46"
+            app:scale_left="128"
+            app:scale_top="0"
+            app:scale_width="1448" />
+
+        <TextView
+            android:id="@+id/player_remain_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/color_ffffff"
+            app:scale_height="150"
+            app:scale_left="1574"
+            app:scale_textsize="34"
+            app:scale_top="0"
+            app:scale_width="94" />
+
+        <ImageView
+            android:id="@+id/_playerSpeedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player__speed"
+            app:scale_height="65"
+            app:scale_left="1704"
+            app:scale_top="43"
+            app:scale_width="65" />
+
+        <TextView
+            android:id="@+id/_playerSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="1.15x"
+            android:textColor="@color/color_white"
+            app:scale_height="150"
+            app:scale_left="1784"
+            app:scale_textsize="34"
+            app:scale_top="0"
+            app:scale_width="100" />
+
+        <!--<ImageView
+            android:id="@+id/player_lock_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_icon_unlock"
+            app:scale_height="110"
+            app:scale_left="1794"
+            app:scale_top="16"
+            app:scale_width="90" /> -->
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/player_play_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_base_height="446"
+        app:scale_base_width="1920"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/player_prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_btn_before"
+            app:scale_height="92"
+            app:scale_left="160"
+            app:scale_top="177"
+            app:scale_width="137" />
+
+        <ImageView
+            android:id="@+id/player_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_btn_after"
+            app:scale_height="92"
+            app:scale_left="1623"
+            app:scale_top="177"
+            app:scale_width="137" />
+
+        <ImageView
+            android:id="@+id/player_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_player_play_button"
+            app:scale_height="446"
+            app:scale_left="737"
+            app:scale_top="0"
+            app:scale_width="446" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/player_preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:scale_base_width="1920"
+        app:scale_base_height="250"
+
+        >
+        <TextView
+            android:id="@+id/player_preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/freeview_bg"
+            android:gravity="center"
+            app:scale_top="150"
+            app:scale_left="48"
+            app:scale_width="422"
+            app:scale_height="100"
+            app:scale_textsize="40"/>"
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <include
+        android:id="@+id/_playerListBaseLayout"
+        layout="@layout/include_player_list_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/_playerSpeedListBaseLayout"
+        layout="@layout/include_player_speed_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/subtitle_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/player_subtitle_layout"/>
+    <include
+        android:id="@+id/play_end_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/player_play_end_layout"/>
+</RelativeLayout>

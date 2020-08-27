@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.ssomai:android.scalablelayout:2.1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android.scalablelayout-2.1.1.aar/636c88d6e684966f6ffcea71f7e8f01d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android.scalablelayout-2.1.1.aar/636c88d6e684966f6ffcea71f7e8f01d/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/291b3e545281dc0e285a3b1eedbc487e/jetified-android.scalablelayout-2.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/291b3e545281dc0e285a3b1eedbc487e/jetified-android.scalablelayout-2.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/291b3e545281dc0e285a3b1eedbc487e/jetified-android.scalablelayout-2.1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ssomai/android.scalablelayout/2.1.1/af8d3a6a22c0cc95bcafe931ef9c00b19d141b4/android.scalablelayout-2.1.1-javadoc.jar!/" />

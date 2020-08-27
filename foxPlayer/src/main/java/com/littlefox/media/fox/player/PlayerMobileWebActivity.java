@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
-import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.text.Html;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,6 +19,9 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 
 import com.littlefox.library.system.async.listener.AsyncListener;
 import com.littlefox.library.system.common.FileUtils;
@@ -524,8 +525,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 		{
 			setCaptionControlButtonVisible(false);
 		}
-		
-		
 	}
 	
 	private void setCaptionLayoutVisible(boolean isVisible)
@@ -624,7 +623,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 		_RemainPlayTimeText.setText(CommonUtils.getInstance(this).getMillisecondTime(_ProgressMediaPlayer.getMaxPlayerDuration()));
 	}
 
-	
 	/**
 	 * 저장되어 있는 모든 파일을 삭제한다.
 	 */
@@ -639,8 +637,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 		}
 		FileUtils.deleteAllFileInPath(Common.PATH_MP4_SAVE);
 	}
-	
-
 
 	/**
 	 * 상태에 따라 레이아웃을 보여주는 메소드
@@ -675,8 +671,6 @@ public class PlayerMobileWebActivity extends BaseActivity
 			});
 			break;
 		case LAYOUT_TYPE_PREVIEW_PLAY:
-			//_TopCaptionSettingButton.setVisibility(View.INVISIBLE);
-			//_BaseSubTitleLayout.setVisibility(View.GONE);
 			_BottomViewLayout.setVisibility(View.INVISIBLE);
 			_PreviewLayout.setVisibility(View.VISIBLE);
 			break;

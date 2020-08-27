@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
-import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.text.Html;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +17,9 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 
 import com.littlefox.library.view.controller.FadeAnimationController;
 import com.littlefox.library.view.controller.FadeAnimationInformation;
@@ -297,11 +298,8 @@ public class PlayerActivity extends BaseActivity
 	private Timer mUiCurrentTimer = null;
 	private String mCurrentPlayUrl = "";
 	private int mCurrentLayoutType = LAYOUT_TYPE_DEFAULT;
-	
 	private Vibrator mVibrator;
 	private String mCurrentPlayContentId = "";
-
-
 	static final List<String> displayedImages = Collections.synchronizedList(new LinkedList<String>());
 	private CaptionInformationResult mCaptionInformationResult;
 	private int mCurrentCaptionIndex = 0;
@@ -648,7 +646,6 @@ public class PlayerActivity extends BaseActivity
 	 */
 	private void requestCurrentPlayVideoUrlInformation()
 	{
-		
 		if(isCaptionPlaying)
 		{
 			mCurrentPlayContentId = mInformationObject.getContentId()+"_caption";
@@ -976,10 +973,7 @@ public class PlayerActivity extends BaseActivity
 					try
 					{
 						_ThumbSeekbar.setProgress(_ProgressMediaPlayer.getMediaPlayProgress());
-					}catch(Exception e)
-					{
-						
-					}
+					}catch(Exception e) {}
 					
 					_CurrentPlayTimeText.setText(CommonUtils.getInstance(PlayerActivity.this).getMillisecondTime(_ProgressMediaPlayer.getCurrentPlayerDuration()));
 					
@@ -1020,8 +1014,6 @@ public class PlayerActivity extends BaseActivity
 		{
 			return false;
 		}
-
-		
 		return false;
 	}
 	
@@ -1042,7 +1034,6 @@ public class PlayerActivity extends BaseActivity
 				{
 					return i;
 				}
-
 			}
 		}
 		

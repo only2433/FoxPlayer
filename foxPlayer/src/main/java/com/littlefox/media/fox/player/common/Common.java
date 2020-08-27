@@ -1,8 +1,8 @@
 package com.littlefox.media.fox.player.common;
 
-import java.io.File;
-
 import android.os.Environment;
+
+import java.io.File;
 
 /**
  * Created by 정재현 on 2015-07-07.
@@ -83,6 +83,7 @@ public class Common
     public static final String PARAMS_APP_INFO							= "app_info";
     public static final String PARAMS_ACCESS_TOKEN						= "access_token";
     public static final String PARAMS_IS_ENG_LANGUAGE					= "language";
+    public static final String PARAMS_PLAYER_SPEED_INDEX                = "speed_index";
     
 	/** 앱 별점 주기 링크 */
 	public static final String APP_LINK = "https://play.google.com/store/apps/details?id=com.littlefox.media.fox.player";

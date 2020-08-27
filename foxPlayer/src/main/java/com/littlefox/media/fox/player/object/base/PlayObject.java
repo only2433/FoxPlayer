@@ -2,8 +2,6 @@ package com.littlefox.media.fox.player.object.base;
 
 import java.io.Serializable;
 
-import com.littlefox.media.fox.player.object.result.CaptionInformationResult;
-
 /**
  * 플레이 영상에 관련되어 있는 기본 오브젝트
  * @author 정재현
@@ -11,7 +9,6 @@ import com.littlefox.media.fox.player.object.result.CaptionInformationResult;
  */
 public class PlayObject implements Serializable
 {
-	
 	private static final long serialVersionUID = 1L;
 	
 	public String fc_id					= "";

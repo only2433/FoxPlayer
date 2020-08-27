@@ -13,12 +13,19 @@ public interface DialogListener
 	 *  내부에 있는 이벤트를 전달받아서 사용하여야한다.
 	 */
 	public static final int SECOND_BUTTON_CLICK			= 101;
+
+	/**
+	 * Custom Dialog에서 사용하는 메소드 ( Flexible Dialog 를 제외한 Dialog)
+	 * @param messageType Common에 명시되어있는 Dialog Status Type
+	 * @param sendObject 보낼 객체
+	 */
+	void onItemClick(int messageType, Object sendObject);
 	
 	
 	/**
 	 * Flexible Dialog에서 사용하는 메소드 
 	 * @param messageButtonType 선택한 버튼 
-	 * @param subMessageType 보낼 Dialog Status Type
+	 * @param messageType 보낼 Dialog Status Type
 	 * @param sendObject 보낼 객체
 	 */
 	public void onItemClick(int messageButtonType, int messageType, Object sendObject);

@@ -3,8 +3,8 @@ package com.littlefox.media.fox.player.base;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.littlefox.logmonitor.ExceptionCheckHandler;
 import com.littlefox.media.fox.player.R;

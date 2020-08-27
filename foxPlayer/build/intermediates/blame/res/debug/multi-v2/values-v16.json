@@ -4,7 +4,7 @@
             "outputFile": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\only340\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\8d03a63b57720308341e1673c826d33e\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\정재현2\\.gradle\\caches\\transforms-2\\files-2.1\\3b101f2bd6bb33415a2285e6e6b63fc4\\core-1.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\only340\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\10ff6a1e3476c23807584e293fb9f37b\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\정재현2\\.gradle\\caches\\transforms-2\\files-2.1\\187b2291c5d1881b0769b5a1224b4e5e\\appcompat-1.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

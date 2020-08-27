@@ -5,16 +5,17 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
+import androidx.viewpager.widget.ViewPager;
 
 import com.littlefox.library.view.extra.SwipeDisableViewPager;
 import com.littlefox.library.view.scroller.FixedSpeedScroller;
@@ -337,8 +338,6 @@ public class MainActivity extends BaseActivity
 			{
 				_ViewPager.setCurrentItem(Common.TYPE_ENGLISH, true);
 			}
-
-
 		}
 	};
 }

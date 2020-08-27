@@ -1,19 +1,25 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.littlefox.media.fox.player"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode="9"
         versionName="1.0.8"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
 
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -35,22 +41,24 @@ buildscript
         {
             ext.support_lib_version ='28.0.0'
             ext.support_google_play ="12.0.1"
+            ext.exoplayer_version = '2.10.1'
         }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
     implementation "com.andkulikov:transitionseverywhere:1.8.0"
-    implementation "com.android.support:appcompat-v7:$support_lib_version"
-    implementation "com.android.support:support-v4:$support_lib_version"
-    implementation "com.android.support:design:$support_lib_version"
-    implementation "com.android.support:recyclerview-v7:$support_lib_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.2'
     testImplementation 'junit:junit:4.12'
 
@@ -62,13 +70,19 @@ dependencies {
 
 
     implementation 'com.github.only2433:LittlefoxLogMoniter:1.0.4'
-    implementation 'com.github.only2433:LittlefoxSystemLibrary:1.0.9'
+    implementation 'com.github.only2433:LittlefoxSystemLibrary:2.0.6'
     implementation 'com.github.only2433:LittlefoxViewLibrary:1.0.14'
     implementation 'com.ssomai:android.scalablelayout:2.1.1'
     implementation 'com.github.axet:zip4j:1.3.2-2'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'com.github.fafaldo:fab-toolbar:1.2.0'
     implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0"
+    implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-hls:$exoplayer_version"
 
 }
 repositories {

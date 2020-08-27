@@ -16,13 +16,13 @@ import com.littlefox.library.system.async.listener.AsyncListener;
 import com.littlefox.library.view.dialog.ProgressWheel;
 import com.littlefox.library.view.text.SeparateTextView;
 import com.littlefox.logmonitor.Log;
-import com.littlefox.media.fox.player.async.InitInformationAsync;
-import com.littlefox.media.fox.player.async.UpdateVersionAsync;
 import com.littlefox.media.fox.player.base.BaseActivity;
 import com.littlefox.media.fox.player.common.Common;
 import com.littlefox.media.fox.player.common.CommonUtils;
 import com.littlefox.media.fox.player.common.Feature;
 import com.littlefox.media.fox.player.common.Font;
+import com.littlefox.media.fox.player.coroutine.InitInformationCoroutine;
+import com.littlefox.media.fox.player.coroutine.UpdateVersionCoroutine;
 import com.littlefox.media.fox.player.dialog.TempleteAlertDialog;
 import com.littlefox.media.fox.player.dialog.listener.DialogListener;
 import com.littlefox.media.fox.player.object.WebInitInformation;
@@ -242,17 +242,19 @@ public class SplashActivity extends BaseActivity
 	
 	private void requestUpdateVersionInformation()
 	{
-		UpdateVersionAsync request = new UpdateVersionAsync(this);
-		request.setAsyncListener(mRequestAsyncListener);
-		request.execute();
+		Log.f("");
+		UpdateVersionCoroutine coroutine = new UpdateVersionCoroutine(this);
+		coroutine.setAsyncListener(mRequestAsyncListener);
+		coroutine.execute();
 	}
 	
     private void requestInitInformation()
     {
+		Log.f("");
     	_ProgressView.setVisibility(View.VISIBLE);
-    	InitInformationAsync request = new InitInformationAsync(this);
-		request.setAsyncListener(mRequestAsyncListener);
-    	request.execute();
+		InitInformationCoroutine coroutine = new InitInformationCoroutine(this);
+		coroutine.setAsyncListener(mRequestAsyncListener);
+		coroutine.execute();
     }
     
     private void saveInitInformation(InitInformationResult result)
@@ -301,7 +303,7 @@ public class SplashActivity extends BaseActivity
     
     private void startMobilePlayerActivity()
     {
-    	Intent intent = new Intent(this, PlayerMobileWebActivity.class);
+    	Intent intent = new Intent(this, PlayerMobileWebHlsActivity.class);
     	startActivity(intent);
     	finish();
     }
@@ -357,6 +359,9 @@ public class SplashActivity extends BaseActivity
 	
 	private DialogListener mDialogListener = new DialogListener()
 	{
+		@Override
+		public void onItemClick(int messageType, Object sendObject) { }
+
 		@Override
 		public void onItemClick(int messageButtonType, int messageType, Object sendObject)
 		{

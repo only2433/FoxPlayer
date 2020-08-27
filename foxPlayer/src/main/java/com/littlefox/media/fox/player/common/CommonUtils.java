@@ -26,8 +26,6 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 import android.preference.PreferenceManager;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -44,8 +42,11 @@ import android.view.animation.TranslateAnimation;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.littlefox.logmonitor.Log;
 import com.littlefox.media.fox.player.R;
@@ -893,6 +894,24 @@ public class CommonUtils
 		}
 		return anim;
 	}
+
+    public Animation getTranslateXAnimation(int duration, float fromXValue, float toXValue)
+    {
+        return getTranslateXAnimation(duration , fromXValue, toXValue, null);
+    }
+
+    public Animation getTranslateXAnimation(int duration, float fromXValue, float toXValue, Interpolator interpolator)
+    {
+        Animation anim = null;
+        anim = new TranslateAnimation(Animation.ABSOLUTE, fromXValue, Animation.ABSOLUTE, toXValue, Animation.RELATIVE_TO_SELF,0, Animation.RELATIVE_TO_SELF, 0);
+        anim.setDuration(duration);
+        anim.setFillAfter(true);
+        if(interpolator != null)
+        {
+            anim.setInterpolator(interpolator);
+        }
+        return anim;
+    }
 	
 	public Animation getAlphaAnimation(int duration, float fromValue, float toValue)
 	{
@@ -930,7 +949,7 @@ public class CommonUtils
 	{
 		Snackbar snackbar = Snackbar.make(coordinatorLayout, message, Snackbar.LENGTH_SHORT);
 		View view = snackbar.getView();
-		TextView textView = (TextView)view.findViewById(android.support.design.R.id.snackbar_text);
+		TextView textView = (TextView)view.findViewById(com.google.android.material.R.id.snackbar_text);
 		textView.setTextColor(color);
 		if(gravity != -1)
 			textView.setGravity(gravity);
@@ -962,13 +981,11 @@ public class CommonUtils
 		
 		Snackbar snackbar = Snackbar.make(coordinatorLayout, messageText, Snackbar.LENGTH_SHORT);
 		View view = snackbar.getView();
-		TextView textView = (TextView)view.findViewById(android.support.design.R.id.snackbar_text);
+		TextView textView = (TextView)view.findViewById(com.google.android.material.R.id.snackbar_text);
 		textView.setText(spannableStringBuilder);
 		snackbar.show();
 	}
-	
 
-	
 	/**
 	 * 플레이 시간으로 프리뷰 시간을 구하는 메소드
 	 * @param totalPlayTime 토탈 플레이 시간
