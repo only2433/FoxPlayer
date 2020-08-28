@@ -167,7 +167,7 @@
             app:scale_left="46"
             app:scale_textsize="34"
             app:scale_top="0"
-            app:scale_width="94" />
+            app:scale_width="104" />
 
         <SeekBar
             android:id="@+id/seekbar_play"
@@ -185,7 +185,7 @@
             app:scale_height="46"
             app:scale_left="148"
             app:scale_top="0"
-            app:scale_width="1298" />
+            app:scale_width="1448" />
 
 
         <TextView
@@ -196,10 +196,10 @@
             android:text=""
             android:textColor="@color/color_ffffff"
             app:scale_height="150"
-            app:scale_left="1424"
+            app:scale_left="1574"
             app:scale_textsize="34"
             app:scale_top="0"
-            app:scale_width="94" />
+            app:scale_width="104" />
 
         <ImageView
             android:id="@+id/_playerSpeedButton"
@@ -207,7 +207,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/player__speed"
             app:scale_height="65"
-            app:scale_left="1604"
+            app:scale_left="1704"
             app:scale_top="43"
             app:scale_width="65" />
 
@@ -219,12 +219,12 @@
             android:text="1.15x"
             android:textColor="@color/color_white"
             app:scale_height="150"
-            app:scale_left="1684"
+            app:scale_left="1784"
             app:scale_textsize="34"
             app:scale_top="0"
             app:scale_width="100" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/player_lock_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -232,7 +232,7 @@
             app:scale_height="110"
             app:scale_left="1794"
             app:scale_top="16"
-            app:scale_width="90" />
+            app:scale_width="90" />-->
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
     <com.ssomai.android.scalablelayout.ScalableLayout

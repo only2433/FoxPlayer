@@ -15,10 +15,7 @@ import com.littlefox.logmonitor.Log;
 import com.littlefox.media.fox.player.R;
 import com.littlefox.media.fox.player.adapter.listener.PlayerEventListener;
 import com.littlefox.media.fox.player.common.Font;
-import com.littlefox.media.fox.player.object.base.PlayObject;
 import com.ssomai.android.scalablelayout.ScalableLayout;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,13 +26,17 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
 {
     private Context mContext;
     private int mCurrentPosition = 0;
-    private ArrayList<PlayObject> mDataList = null;
+    private String[] mThumbnailList;
+    private String[] mTitleList;
+    private int maxItemCount = 0;
     private PlayerEventListener mPlayerEventListener;
-    public PlayerListAdapter(Context context, int currentPosition, ArrayList<PlayObject> list)
+    public PlayerListAdapter(Context context, int currentPosition, String[] thumbnailList, String[] titleList)
     {
         mContext            = context;
         mCurrentPosition    = currentPosition;
-        mDataList           = list;
+        mThumbnailList      = thumbnailList;
+        mTitleList          = titleList;
+        maxItemCount        = mTitleList.length;
     }
 
     public void setCurrentPlayPosition(int index)
@@ -62,8 +63,8 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position)
     {
-        Glide.with(mContext).load(mDataList.get(position).image_url).transition(withCrossFade()).into(holder._ItemTitleImage);
-        holder._ItemTitleText.setText(mDataList.get(position).getTitle());
+        Glide.with(mContext).load(mThumbnailList[position]).transition(withCrossFade()).into(holder._ItemTitleImage);
+        holder._ItemTitleText.setText(mTitleList[position]);
 
         if(mCurrentPosition == position)
         {
@@ -88,7 +89,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return mDataList.size();
+        return maxItemCount;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder

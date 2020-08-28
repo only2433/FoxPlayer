@@ -163,7 +163,18 @@ public class SplashActivity extends BaseActivity
 			String[] contentIDList  = mInformationURI.getQueryParameter("param1").split("/");
 			String[] authTypeList	= mInformationURI.getQueryParameter("param2").split("/");
 			String[] extraList		= mInformationURI.getQueryParameter("param3").split("/");
-			String serviceCode		= mInformationURI.getQueryParameter("param4");
+			String 	serviceCode		= mInformationURI.getQueryParameter("param4");
+			String[] thumbnailList	= mInformationURI.getQueryParameter("param6").split("///");
+			String[] titleList		= mInformationURI.getQueryParameter("param7").split("///");
+
+			for(int i = 0; i < titleList.length; i++)
+			{
+				titleList[i] = titleList[i].replace("+", " ");
+				Log.f(" position : "+ i+", title : "+ titleList[i]+", thumbnail : "+ thumbnailList[i]);
+				Log.f("\n");
+			}
+
+
 			
 			if(extraList[URI_EXTRA_INDEX_USER_TYPE].equals(String.valueOf(Common.USER_TYPE_FREE)))
 			{
@@ -181,7 +192,9 @@ public class SplashActivity extends BaseActivity
 					extraList[URI_EXTRA_INDEX_USER_TYPE],
 					extraList[URI_EXTRA_INDEX_CLIENT_KEY],
 					extraList[URI_EXTRA_INDEX_SERVER_KEY],
-					serviceCode);
+					serviceCode,
+					thumbnailList,
+					titleList);
 			
 			CommonUtils.getInstance(this).setPreferenceObject(Common.PARAMS_WEB_INIT_INFORMATION, information);	
 			startMobilePlayerActivity();

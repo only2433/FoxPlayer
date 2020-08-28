@@ -11,6 +11,16 @@ public class WebInitInformation
 	 * auth_type 들이 들어 있는 String 배열
 	 */
 	private String[] mContentTypeList;
+
+	/**
+	 * 영상 리스트 썸네일 배열
+	 */
+	private String[] mThumbNailList;
+
+	/**
+	 * 영상 타이틀 배열
+	 */
+	private String[] mTitleList;
 	
 	/**
 	 * fu_id
@@ -27,7 +37,9 @@ public class WebInitInformation
 	
 	private int mPlayItemCount = -1;
 	
-	public WebInitInformation(String[] contentIDList, String[] contentTypeList, String foxUserID, String userType, String clientKey, String serverKey, String serviceCode)
+	public WebInitInformation(String[] contentIDList, String[] contentTypeList, String foxUserID,
+							  String userType, String clientKey, String serverKey, String serviceCode,
+							String[] thumbnailList, String[] titleList)
 	{
 		mContentIDList 		= contentIDList;
 		mContentTypeList	= contentTypeList;
@@ -36,6 +48,8 @@ public class WebInitInformation
 		mClientKey			= clientKey;
 		mServerKey			= serverKey;
 		mServiceCode		= serviceCode;
+		mThumbNailList		= thumbnailList;
+		mTitleList			= titleList;
 		mPlayItemCount		= mContentIDList.length;
 	}
 
@@ -77,6 +91,16 @@ public class WebInitInformation
 	public String[] getContentTypeList()
 	{
 		return mContentTypeList;
+	}
+
+	public String[] getThumbNailList()
+	{
+		return mThumbNailList;
+	}
+
+	public String[] getTitleList()
+	{
+		return mTitleList;
 	}
 
 	public String getUserID()

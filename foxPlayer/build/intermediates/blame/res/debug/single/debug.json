@@ -1,19 +1,19 @@
 [
     {
-        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_intro_bg.png.flat",
-        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\intro_bg.png"
-    },
-    {
-        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_icon_app02.png.flat",
-        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\icon_app02.png"
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_mobile_web_main_not_support_display.xml.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_mobile_web_main_not_support_display.xml"
     },
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\mipmap-nodpi_ic_launcher.png.flat",
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\mipmap-nodpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_mobile_web_main_not_support_display.xml.flat",
-        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_mobile_web_main_not_support_display.xml"
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_icon_app02.png.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\icon_app02.png"
+    },
+    {
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_intro_bg.png.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\intro_bg.png"
     },
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_icon_close.png.flat",
@@ -52,12 +52,12 @@
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\player_btn_after.png"
     },
     {
-        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_subtitle_layout.xml.flat",
-        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_subtitle_layout.xml"
-    },
-    {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player_icon_subtitle_yellow.png.flat",
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\player_icon_subtitle_yellow.png"
+    },
+    {
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_subtitle_layout.xml.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_subtitle_layout.xml"
     },
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player_btn_before.png.flat",
@@ -124,12 +124,12 @@
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-xxxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player_icon_replay.png.flat",
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\player_icon_replay.png"
+    },
+    {
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",

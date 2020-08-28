@@ -108,8 +108,8 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
     @BindView(R.id.player_remain_play_time)
     TextView _RemainPlayTimeText;
 
-    @BindView(R.id.player_lock_button)
-    ImageView _LockButton;
+   // @BindView(R.id.player_lock_button)
+   // ImageView _LockButton;
 
     @BindView(R.id.player_play_button_layout)
     ScalableLayout _PlayButtonLayout;
@@ -244,11 +244,11 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                     break;
                 case MESSAGE_PREV_PLAY:
                     prepareVideo(VIDEO_PREV_PLAY);
-                   // mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
+                    mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
                     break;
                 case MESSAGE_NEXT_PLAY:
                     prepareVideo(VIDEO_NEXT_PLAY);
-                   // mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
+                    mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
                     break;
                 case MESSAGE_SELECT_PLAY:
                     prepareVideo(VIDEO_SELECT_PLAY);
@@ -259,7 +259,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                 case MESSAGE_VIDEO_VISIBLE:
                     _BackgroundDiscoverImage.setVisibility(View.GONE);
                     break;
-                case MESSAGE_LOCK_MODE_READY:
+               /* case MESSAGE_LOCK_MODE_READY:
                     mVibrator.vibrate(DURATION_PLAY);
                     showMenu(false);
                     isLockDisplay = (Boolean) msg.obj;
@@ -271,7 +271,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                 case MESSAGE_LOCK_MODE_SET:
                     setLockModeUI();
                     showMenu(true);
-                    break;
+                    break;*/
                 case MESSAGE_UPDATE_PAID_UI:
                     updateUI();
                     break;
@@ -363,7 +363,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
     /**
      * 락버튼이 ON 이 되었는 지 , OFF 인지
      */
-    private boolean isLockDisplay = false;
+    //private boolean isLockDisplay = false;
 
     private WebInitInformation mWebInitInformation;
     private VideoInformationResult mVideoInformationResult;
@@ -462,7 +462,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         mPlayedContentDBHelper = PlayedContentDBHelper.getInstance(this);
         mVibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
         setCaptionLayoutStatus(isCaptionPlaying);
-        _LockButton.setOnTouchListener(mLockControlListener);
+        //_LockButton.setOnTouchListener(mLockControlListener);
         _ThumbSeekbar.setOnSeekBarChangeListener(mSeekBarChangeListener);
 
         LayerDrawable layerDrawable = (LayerDrawable)getResources().getDrawable(R.drawable.seekbar_thumb);
@@ -511,13 +511,12 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         initViewSetting();
         setupPlayVideo();
         prepareVideo(VIDEO_INIT_PLAY);
-        //initPlayListView();
+        initPlayListView();
         initPlaySpeedListView();
     }
 
     private void initViewSetting()
     {
-        _PlayerListButton.setEnabled(false);
         RelativeLayout.LayoutParams baseLayoutParams = new RelativeLayout.LayoutParams(CommonUtils.getInstance(this).getPixel(654), RelativeLayout.LayoutParams.MATCH_PARENT);
         baseLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         baseLayoutParams.removeRule(RelativeLayout.BELOW);
@@ -720,14 +719,14 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         }
     }
 
-    /*private void initPlayListView()
+    private void initPlayListView()
     {
-        mPlayerListAdapter = new PlayerListAdapter(this, mCurrentPlayPosition, mContentPlayObject.getPlayObjectList());
+        mPlayerListAdapter = new PlayerListAdapter(this, mCurrentPlayPosition, mWebInitInformation.getThumbNailList(), mWebInitInformation.getTitleList());
         mPlayerListAdapter.setOnPlayEventListener(mPlayerEventListener);
         _PlayerListView.setLayoutManager(new LinearLayoutScrollerManager(this));
         _PlayerListView.setAdapter(mPlayerListAdapter);
         forceScrollView(mCurrentPlayPosition);
-    }*/
+    }
 
     private void initPlaySpeedListView()
     {
@@ -773,16 +772,17 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         {
             return;
         }
-        isLockDisplay = false;
-        setLockModeUI();
+        //isLockDisplay = false;
+       // setLockModeUI();
         if(mPlayer != null && isPlaying())
         {
             mCurrentPlayDuration = (int) mPlayer.getCurrentPosition();
             mPlayer.setPlayWhenReady(false);
             setPlayIconStatus(PLAYER_PAUSE);
             enableTimer(false);
+            mCurrentPlayerStatus = PlayerStatus.PAUSE;
         }
-        mCurrentPlayerStatus = PlayerStatus.PAUSE;
+
     }
 
     private void resumePlayer()
@@ -816,7 +816,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         //플레이 타이머 보여줌
         mPlayer.setPlayWhenReady(true);
         enableTimer(true);
-       // mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
+        mPlayerListAdapter.setCurrentPlayPosition(mCurrentPlayPosition);
         mMainHandler.sendEmptyMessageDelayed(MESSAGE_VIDEO_VISIBLE, DURATION_GONE_BACKGROUND);
     }
 
@@ -962,6 +962,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
             case LAYOUT_TYPE_DEFAULT:
                 _BaseSubTitleLayout.setVisibility(View.GONE);
                 _BasePlayEndLayout.setVisibility(View.GONE);
+                _PlayerOptionBackground.setVisibility(View.GONE);
                 break;
             case LAYOUT_TYPE_SUBTITLE_DIALOG:
                 _BaseSubTitleLayout.setVisibility(View.VISIBLE);
@@ -1060,7 +1061,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         }
     }
 
-    private void setLockModeUI()
+    /*private void setLockModeUI()
     {
         if(isLockDisplay)
         {
@@ -1080,7 +1081,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
             _ThumbSeekbar.setVisibility(View.VISIBLE);
             _RemainPlayTimeText.setVisibility(View.VISIBLE);
         }
-    }
+    }*/
 
     /**
      * 메뉴가 현재 보이는 상태인지 체크
@@ -1088,29 +1089,13 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
      */
     private boolean isMenuVisible()
     {
-        Log.i("mCurrentLayoutType : " + mCurrentLayoutType+ " , _TopViewLayout  : "+ _TopViewLayout.getVisibility() + " , _BottomViewLayout.getVisibility() : "+_BottomViewLayout.getVisibility());
-        Log.i("_PlayButtonLayout getVisibility: " + _PlayButtonLayout.getVisibility());
         if(mCurrentLayoutType == LAYOUT_TYPE_PREVIEW_PLAY)
         {
-            if((_TopViewLayout.getVisibility()) == View.VISIBLE)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (_TopViewLayout.getVisibility()) == View.VISIBLE;
         }
         else
         {
-            if((_TopViewLayout.getVisibility()  == View.VISIBLE || _BottomViewLayout.getVisibility() == View.VISIBLE || _PlayButtonLayout.getVisibility()== View.VISIBLE ))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (_TopViewLayout.getVisibility() == View.VISIBLE || _BottomViewLayout.getVisibility() == View.VISIBLE || _PlayButtonLayout.getVisibility() == View.VISIBLE);
         }
     }
 
@@ -1123,26 +1108,20 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         Log.i("isVisible : "+isVisible+", isMenuVisible : "+isMenuVisible());
         if(isVisible)
         {
-            if(isMenuVisible() == false)
+            mFadeAnimationController.startAnimation(_TopViewLayout, FadeAnimationController.TYPE_FADE_IN);
+            if(mCurrentLayoutType == LAYOUT_TYPE_DEFAULT)
             {
-                mFadeAnimationController.startAnimation(_TopViewLayout, FadeAnimationController.TYPE_FADE_IN);
-                if(mCurrentLayoutType == LAYOUT_TYPE_DEFAULT)
-                {
-                    mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_IN);
-                    mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_IN);
-                }
+                mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_IN);
+                mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_IN);
             }
         }
         else
         {
-            if(isMenuVisible() == true)
+            mFadeAnimationController.startAnimation(_TopViewLayout, FadeAnimationController.TYPE_FADE_OUT);
+            if(mCurrentLayoutType == LAYOUT_TYPE_DEFAULT)
             {
-                mFadeAnimationController.startAnimation(_TopViewLayout, FadeAnimationController.TYPE_FADE_OUT);
-                if(mCurrentLayoutType == LAYOUT_TYPE_DEFAULT)
-                {
-                    mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_OUT);
-                    mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_OUT);
-                }
+                mFadeAnimationController.startAnimation(_PlayButtonLayout, FadeAnimationController.TYPE_FADE_OUT);
+                mFadeAnimationController.startAnimation(_BottomViewLayout, FadeAnimationController.TYPE_FADE_OUT);
             }
         }
     }
@@ -1285,11 +1264,19 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                 break;
             case VIDEO_PREV_PLAY:
                 mCurrentPlayPosition = getPrevPosition(mCurrentPlayPosition);
-                showMenu(false);
+                if(isMenuVisible())
+                {
+                    showMenu(false);
+                }
+
                 break;
             case VIDEO_NEXT_PLAY:
                 mCurrentPlayPosition = getNextPositionWhenSingle(mCurrentPlayPosition);
-                showMenu(false);
+                if(isMenuVisible())
+                {
+                    showMenu(false);
+                }
+
                 break;
             case VIDEO_SELECT_PLAY:
                 break;
@@ -1477,7 +1464,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
 
                 _CurrentPlayTimeText.setText(CommonUtils.getInstance(PlayerMobileWebHlsActivity.this).getMillisecondTime((int) mPlayer.getCurrentPosition()));
 
-                Log.f("mCurrentCaptionIndex : " + mCurrentCaptionIndex);
+
                 if (Feature.IS_CAPTION_USED) {
                     if (isTimeForCaption() == true) {
                         _CaptionTitleText.setText(Html.fromHtml(mCaptionInformationResult.getCaptionDetailInformationList().get(mCurrentCaptionIndex).getText()));
@@ -1511,8 +1498,6 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         {
             return false;
         }
-
-
         return false;
     }
 
@@ -1693,6 +1678,30 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         }
     }
 
+    private boolean isPlayListVisible()
+    {
+        if(_PlayerListBaseLayout.getVisibility() == View.VISIBLE)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private boolean isPlaySpeedListVisible()
+    {
+        if(_PlayerSpeedListBaseLayout.getVisibility() == View.VISIBLE)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     @OnClick({R.id.play_end_replay_layout, R.id.subtitle_normal_layout, R.id.subtitle_use_layout,R.id.subtitle_close_button})
     public void onDisplayButtonClick(View view)
@@ -1751,14 +1760,22 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
             case R.id.player_next_button:
                 Log.f("Player Next Button Click");
                 requestPlaySaveRecord();
-                showMenu(false);
+                if(isMenuVisible())
+                {
+                    showMenu(false);
+                }
+
                 settingLayout(LAYOUT_TYPE_DEFAULT);
                 mMainHandler.sendEmptyMessageDelayed(MESSAGE_NEXT_PLAY, DURATION_PLAY);
                 break;
             case R.id.player_prev_button:
                 Log.f("Player Prev Button Click");
                 requestPlaySaveRecord();
-                showMenu(false);
+                if(isMenuVisible())
+                {
+                    showMenu(false);
+                }
+
                 settingLayout(LAYOUT_TYPE_DEFAULT);
                 mMainHandler.sendEmptyMessageDelayed(MESSAGE_PREV_PLAY, DURATION_PLAY);
                 break;
@@ -1797,9 +1814,9 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                 }
                 else
                 {
-                    showMenu(false);
                     if(isMenuVisible())
                     {
+                        showMenu(false);
                         Log.f("Player SubTitle Layout Gone Click");
                         Message msg = Message.obtain();
                         msg.what = MESSAGE_LAYOUT_SETTING;
@@ -1835,7 +1852,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
         }
     }
 
-    private OnTouchListener mLockControlListener = new OnTouchListener()
+    /*private OnTouchListener mLockControlListener = new OnTouchListener()
     {
 
         @Override
@@ -1857,7 +1874,7 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
             }
             return true;
         }
-    };
+    };*/
 
     private OnTouchListener mMenuVisibleListener = new OnTouchListener()
     {
@@ -1882,13 +1899,26 @@ public class PlayerMobileWebHlsActivity extends BaseActivity
                     return false;
                 }
 
-                if(isMenuVisible() == false)
+                if(isMenuVisible())
                 {
-                    showMenu(true);
+                    Log.f("isMenuVisible visible");
+                    showMenu(false);
+                    enableBackgroudAnimation(false);
                 }
                 else
                 {
-                    showMenu(false);
+                    Log.f("isMenuVisible false, isPlayListVisible() : "+isPlayListVisible()+", isPlaySpeedListVisible() : "+isPlaySpeedListVisible());
+
+                    showMenu(true);
+                    if(isPlayListVisible())
+                    {
+                        enablePlayListAnimation(false);
+                    }
+                    if(isPlaySpeedListVisible())
+                    {
+                        enablePlaySpeedListAnimation(false);
+                    }
+                    enableBackgroudAnimation(true);
                 }
             }
             return true;

@@ -154,7 +154,7 @@
             app:scale_left="46"
             app:scale_textsize="34"
             app:scale_top="0"
-            app:scale_width="94" />
+            app:scale_width="104" />
 
         <SeekBar
             android:id="@+id/seekbar_play"
@@ -185,7 +185,7 @@
             app:scale_left="1574"
             app:scale_textsize="34"
             app:scale_top="0"
-            app:scale_width="94" />
+            app:scale_width="104" />
 
         <ImageView
             android:id="@+id/_playerSpeedButton"

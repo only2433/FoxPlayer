@@ -347,7 +347,6 @@ public class PlayerActivity extends BaseActivity
 		{
 			e.printStackTrace();
 		}
-		
 		initFont();
 		initText();
 		init();
