@@ -70,6 +70,12 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
+            android:name=".PlayerHlsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name=".PlayerMobileWebActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"

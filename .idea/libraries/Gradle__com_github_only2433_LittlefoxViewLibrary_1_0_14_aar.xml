@@ -2,11 +2,15 @@
   <library name="Gradle: com.github.only2433:LittlefoxViewLibrary:1.0.14@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/402fbeedf3227f3478d1b0d8d6e6d984/jetified-LittlefoxViewLibrary-1.0.14/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9432e18282e16f828fcb09193a9eedfe/jetified-LittlefoxViewLibrary-1.0.14/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/402fbeedf3227f3478d1b0d8d6e6d984/jetified-LittlefoxViewLibrary-1.0.14/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/402fbeedf3227f3478d1b0d8d6e6d984/jetified-LittlefoxViewLibrary-1.0.14/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/402fbeedf3227f3478d1b0d8d6e6d984/jetified-LittlefoxViewLibrary-1.0.14/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9432e18282e16f828fcb09193a9eedfe/jetified-LittlefoxViewLibrary-1.0.14/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9432e18282e16f828fcb09193a9eedfe/jetified-LittlefoxViewLibrary-1.0.14/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9432e18282e16f828fcb09193a9eedfe/jetified-LittlefoxViewLibrary-1.0.14/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.only2433/LittlefoxViewLibrary/1.0.14/bb569360108fc3d1f21f5047ffe6962fd2579398/LittlefoxViewLibrary-1.0.14-javadoc.jar!/" />

@@ -96,6 +96,7 @@
             app:scale_width="62"
             app:scale_height="60"/>
 
+
         <ImageView
             android:id="@+id/player_close_button"
             android:layout_width="wrap_content"
@@ -140,7 +141,7 @@
         android:layout_alignParentBottom="true"
         app:scale_base_width="1920"
         app:scale_base_height="150"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/player_current_play_time"
@@ -209,6 +210,7 @@
             app:scale_top="0"
             app:scale_width="100" />
 
+
         <!--<ImageView
             android:id="@+id/player_lock_button"
             android:layout_width="wrap_content"
@@ -260,29 +262,6 @@
             app:scale_width="446" />
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
-    <com.ssomai.android.scalablelayout.ScalableLayout
-        android:id="@+id/player_preview_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:scale_base_width="1920"
-        app:scale_base_height="250"
-
-        >
-        <TextView
-            android:id="@+id/player_preview_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/color_ffffff"
-            android:background="@drawable/freeview_bg"
-            android:gravity="center"
-            app:scale_top="150"
-            app:scale_left="48"
-            app:scale_width="422"
-            app:scale_height="100"
-            app:scale_textsize="40"/>"
-    </com.ssomai.android.scalablelayout.ScalableLayout>
-
     <include
         android:id="@+id/_playerListBaseLayout"
         layout="@layout/include_player_list_layout"
@@ -303,12 +282,10 @@
         android:id="@+id/subtitle_setting_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         layout="@layout/player_subtitle_layout"/>
     <include
         android:id="@+id/play_end_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        layout="@layout/player_play_end_layout"/>
+        layout="@layout/include_other_app"/>
 </RelativeLayout>

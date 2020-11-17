@@ -44,6 +44,10 @@
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\main_btn02.png"
     },
     {
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_main_not_support_display_hls.xml.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_main_not_support_display_hls.xml"
+    },
+    {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player__speed.png.flat",
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\player__speed.png"
     },
@@ -242,6 +246,10 @@
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player_small_icon_no_subtitle_yellow.png.flat",
         "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\drawable-nodpi\\player_small_icon_no_subtitle_yellow.png"
+    },
+    {
+        "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\layout_player_main_hls.xml.flat",
+        "source": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\src\\main\\res\\layout\\player_main_hls.xml"
     },
     {
         "merged": "D:\\android_studio_workspace\\FoxPlayer\\foxPlayer\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_player_subtitle_bg.png.flat",
